@@ -32,3 +32,6 @@ build/
 ### VS Code ###
 .vscode/
 target
+com.example.demo.error.ErrorService.class
+org.apache.catalina.core.StandardWrapperValve.class
+org.springframework.context.annotation.ClassPathBeanDefinitionScanner.class
