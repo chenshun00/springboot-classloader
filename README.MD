@@ -112,7 +112,9 @@ java org.springframework.boot.loader.PropertiesLauncher
 
 理解NoSuchMethodError出现的本质原因
 > jvm加载的class没有这个方法.为啥没有这个方法，原因有两
+> 
 > 一、classpath没有这个class文件(jar中不包含对应的class文件)
+> 
 > 二、加载class的时候，不符合预期的jar包中的class被优先加载了
 
 明白 `优先` 的实现。
@@ -121,7 +123,7 @@ java org.springframework.boot.loader.PropertiesLauncher
 > 解压启动会排序
 > jar启动随机加载
 
-由于maven传递性，过于简单的使用IDEA难以复现，只能采取拷贝jar包的方式进行处理
+由于maven的特性，过于简单的jar包冲突使用IDEA难以复现，只能采取拷贝jar包的方式进行处理
 
 ## 解压启动
 
@@ -133,7 +135,7 @@ java org.springframework.boot.loader.PropertiesLauncher
 
 ## java -jar 启动
 
-由于演示过于简单,maven编译将jar包冲突编译到一起，只能先解压随后进行拷贝处理
+由于演示过于简单,maven编译无法将jar包冲突的package编译到一起，只能先解压随后进行拷贝的方式进行处理
 
 ### jar包压缩
 
