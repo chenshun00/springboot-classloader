@@ -4,7 +4,18 @@
 arthas
 └── arthas-bin.zip  ---> 魔改后的Arthas,新增命令行输出
 clazz
-└── ExecutableArchiveLauncher.class ---> 修改以后的class文件,用于验证NoSuchMethodError
+└── ExecutableArchiveLauncher.class ---> 修改以后的class文件,用于验证NoSuchMethodError 
+lab
+├── explode 解压后的jar包
+│   ├── must_error.bash         必然出现NoSuchMethodError
+│   ├── must_not_error.bash     必然不出现NoSuchMethodError
+│   └── normal.bash             没有jar包冲突的情况
+└── jar
+    ├── ExecutableArchiveLauncher.class ---> 输出加载的jar包顺序
+    ├── normal.bash             没有jar包冲突的情况
+    ├── test1jar.bash           加入一个jar包冲突的情况
+    ├── test2jar.bash           加入二个jar包冲突的情况
+    └── testOk.bash             测试jar重排序后的冲突的情况
 lib
 ├── no-such-method-common-1.0-SNAPSHOT.jar  ---> jar包冲突验证(验证加载顺序与字符的关系)
 ├── no-such-method-error-0.1-SNAPSHOT.jar   ---> jar包冲突验证(验证加载顺序与字符的关系)
