@@ -111,11 +111,9 @@ java org.springframework.boot.loader.PropertiesLauncher
 # 定制NoSuchMethodError
 
 理解NoSuchMethodError出现的本质原因
-> jvm加载的class没有这个方法.为啥没有这个方法，原因有两
+> jvm加载的class没有这个方法.为啥没有这个方法
 > 
-> 一、classpath没有这个class文件(jar中不包含对应的class文件)
-> 
-> 二、加载class的时候，不符合预期的jar包中的class被优先加载了
+> 加载class的时候，不符合预期的jar包中的class被优先加载了
 
 明白 `优先` 的实现。
 
